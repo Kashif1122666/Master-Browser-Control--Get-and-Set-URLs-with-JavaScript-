@@ -1,0 +1,36 @@
+chapter 76: Browser control - Getting and setting the url 
+
+1. Getting the full URL 
+     In javascript , you can easily check the full URL of the page you're on using the window.
+     location.href property.
+
+     var currentURL = window.location.href;
+     console.log(currentURL);
+     this shows the complete web address.
+
+2. Breaking the url into parts
+     you can extract specific parts of the url:
+
+        Domain Name (e.g www.example.com):
+        var domain = window.location.hostname; 
+        console.log(domain);
+
+        patname(e.g., /product/page33.html):
+           var path = window.location.pathname;
+           console.log(path);
+
+        Anchor (e.g., #humidifier):   
+           var anchor = window.location.hash;
+           console.log(anchor);
+
+3.Setting  a new url          
+          you can also tell the Browser to go to a new url:
+            window.location.href = "https:/www.newsite.com";
+
+          you can even use the current domain to navigate within the smae site:  
+            var newPage = "http://" + window.location.hostname + "/newpage.html";
+            window.location.href = newPage;
+
+Summary: The window.location object is your key for controlling the Browser's url, allowing            
+you to get parts  of the url or even navigate to  a new one!
+          
